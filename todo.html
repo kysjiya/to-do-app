@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="heading my-5">TO-DO LIST</h1>
+        <div class="p-css">
+        <div class="main">
+            <div class="input-group mb-3 " style="margin: 10px 0px 10px 80px;">
+                <input type="text" class="form-control-lg" id="input" style="border: none; width: 400px;" placeholder="Add Tasks"  aria-describedby="button-addon2">
+                <button class="btn btn-primary btn-css" type="button" id="button-addon2"> + </button>
+            </div>
+        
+             <div id="list">
+
+             </div>
+
+       </div>
+    </div>
+    </div>
+
+    
+</body>
+<style>
+ body{
+    background-image: url(/to-do/Anime\ Original\ HD\ Wallpaper\ by\ 雨月レイ.jpg);
+    height: 100vh;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    margin: 0px;
+    box-sizing: border-box;
+    }
+.heading{
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  color: white;
+    }
+.main-container{
+    display: grid;
+    row-gap: 0px;
+    justify-content: center;
+    align-items: center;
+}
+.p-css{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.429);
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#list{
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+    list-style: circle;
+}
+.btn-css:hover{
+      background-color: cyan;
+      border-color: aquamarine;
+      color: black;
+}
+#input:hover{
+    background-color: cyan;
+    color: black;
+}
+</style>
+
+<script>
+
+    $('.btn-css').click(()=>{
+        let a=$('#input').val()
+        $('#list').append(`<li>${a}</li>`)
+    })
+</script>
+</html>
